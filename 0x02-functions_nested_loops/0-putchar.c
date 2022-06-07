@@ -5,7 +5,7 @@
  * Return: Always 0 (Success)
  */
 int main(void)
-
+{
 	int x;
 
 	char string[8] = "_putchar";
@@ -15,3 +15,4 @@ int main(void)
 	}
 	_putchar ('\n');
 	return (0);
+}
