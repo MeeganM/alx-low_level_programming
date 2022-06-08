@@ -7,7 +7,7 @@
  * Return: Always 0.
  */
 int main(void)
-}
+{
 
 	long int i, j, k, next;
 
