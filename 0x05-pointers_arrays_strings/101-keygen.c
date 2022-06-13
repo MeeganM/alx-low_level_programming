@@ -1,3 +1,8 @@
+/*
+ * File: 101-keygen.c
+ * Code by Meegan Mabyana
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
