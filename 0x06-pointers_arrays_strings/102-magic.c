@@ -1,3 +1,23 @@
-VimCrypt~03!në©w®rNô sL«¤²ÌÅîİzrg+Ñõèts£Å°vŠÿxx‹’²Ş´O2YS¢®rõ½ğtoÛª¶1	Ş6ı0^ÎJËLÙè›s%Å;šNËWTín~XnŸÎŒZ®Ÿû´Ÿjï$ºéä˜>y³@PŸâ˜Æ%i—Á§ñ6oÅ@ç*H\rÚEfáÃª&	7§+«M°æ#±¦ÿê6ÔÇOìÿóãÿgğÎ;-4•±ÛgŒàôEûöÀõÕ.«~~OQ¹æÃÕìAeøY#~i¦§­Â‹qä›Ê{’Ï/}óÛ“;&€v¹¾´Bkt’ûú¹–…aE}…œ8
-Un¥˜\˜]`jË5ZUgêOÁ‹‰…×&ŞjE<F%÷œCŒä¾=ÂÏÇ"pİu·¡5V”	Á¡Ô1\RÂªù¨BÍÉEMpn U)Ó×™˜^0Bš‰–3Ï‰qgMsÇõW*S<ü¤‡@aÃüİôÑ,“iwW€kGû
-¥QkPg¾®t–ñ~£„Áx İºğ´¦eôÂ¯
+#include <stdio.h>
+
+int main(void)
+{
+	int n;
+	int a[5];
+	int *p;
+
+	a[2] = 1024;
+	p = &n;
+	/**
+	 * write your line of code here...
+	 *  Remember:
+	 *  - you are not allowed to use a
+	 *  - you are not allowed to modify p
+	 *  - only one statement
+	 *  - you are not allowed to code anything else than this line of code
+	 */
+	*(p + 5) = 98;
+	/* ...so that this prints 98\n */
+	printf("a[2] = %d\n", a[2]);
+	return (0);
+}

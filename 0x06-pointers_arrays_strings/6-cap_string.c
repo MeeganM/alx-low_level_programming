@@ -1,56 +1,33 @@
 #include "main.h"
+
 /**
- * separator - checks if character is a seperator
- * @c: character to be checked
- * Return: if seperator return 1. Otherwise return 0;
+ * cap_string - a function that capitalizes all words of a string
+ * @n: input string
+ * Return: caps on first letter of a separator
  */
-
-int separator(char c)
+char *cap_string(char *n)
 {
-	switch (c)
+	int i, x;
+	int cap = 32;
+	int separators[] = {',', ';', '.', '?', '"','(', ')', '{', '}', ' ', '\n', '\t'};
+
+	for (i = 0; n[i] != '\0'; i++)
 	{
-	case ' ':
-	case '\t':
-	case '\n':
-	case ',':
-	case ';':
-	case '.':
-	case '!':
-	case '?':
-	case '"':
-	case '(':
-	case ')':
-	case '{':
-	case '}':
-		return (1);
-
-	default:
-		return (0);
-	}
-}
-/**
- * cap_string - capitalizes chars after given deliminators
- * @s: string to uppercase
- * Return: returns modified string
- */
-
-char *cap_string(char *s)
-{
-	int count, upper;
-
-	upper = -32;
-
-	count = 0;
-
-	while (s[count] != '\0')
-	{
-
-		if (s[count] >= 'a' && s[count] <= 'z')
+		if (n[i] >= 'a' && n[i] <= 'z')
 		{
-
-			s[count] += upper;
+			n[i] = n[i] - cap;
 		}
-		count++;
+
+		cap = 0;
+
+		for (x = 0; x <= 12; x++)
+		{
+			if (n[i] == separators[x])
+			{
+				x = 12;
+				cap = 32;
+			}
+		}
 	}
-	return (s);
+	return (n);
 }
