@@ -29,7 +29,13 @@ unsigned int _strspn(char *s, char *accept)
 				break;
 			}
 
-			x++;
+			y++;
 		}
-		return (count);
+
+		if (s[x] != accept[y])
+		{
+			break;
+		}
+
+		x++;
 	}
