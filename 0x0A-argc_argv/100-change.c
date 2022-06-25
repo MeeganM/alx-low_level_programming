@@ -1,36 +1,40 @@
-#include <stdio.h>
+#include "main.h"
+
 /**
- * main -> this is a function to print its name
- * @argc:argc parameter
- * @argv: an array of a command listed
- * Return:0 for sucess
+ * main - prints the minimum number of coins for change for an amount of money
+ * @argc: argument count
+ * @argv: argument vector, only one argument more beside program name
+ * Return: least number of coins, 0 if negative amount, 1 if amount not given
  */
+
 
 int main(int argc, char *argv[])
 {
-	int num, j, result = 0;
-	int coins[] = {25, 10, 5, 2, 1};
+	int n, c = 0; /* n = number and c = coins */
 
 	if (argc != 2)
 	{
-		printf("%s\n", "Error");
+		printf("Error\n");
 		return (1);
 	}
-
-	num = atoi(argv[1]);
-	if (num < 0)
+	if (argv[1][0] == '-')
 	{
 		printf("0\n");
 		return (0);
 	}
-	for (j = 0; j < 5 && num >= 0; j++)
-	{
-		while (num >= coins[j])
-		{
-			num -= coins[j];
-			result++;
-		}
-	}
-	printf("%d\n", result);
+
+	n = atoi(argv[1]);
+
+	c += n / 25;
+	n = n % 25;
+	c += n / 10;
+	n = n % 10;
+	c += n / 5;
+	n = n % 5;
+	c += n / 2;
+	n = n % 2;
+	c += n / 1;
+
+	printf("%d\n", c);
 	return (0);
 }
