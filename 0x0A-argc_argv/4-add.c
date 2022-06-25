@@ -1,35 +1,31 @@
-#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+
 /**
  * main - prints the name of the program, followed new line
- * @argc: number of arguments
- * @argv: array of arguments
- * Return: Always 0 (Success)
+ * @argc:argc parameter
+ * @argv: array of command listed
+ * Return:0 for sucess
  */
 int main(int argc, char *argv[])
-{
-	int a, b, y, r, s;
+{	int result = 0, num, i, j, k;
 
-	if (argc > 0)
+	for (i = 1; i < argc; i++)
 	{
-		for (a = 1; a < argc; a++)
+		for (j = 0; argv[i][j] != '\0'; j++)
 		{
-			for (b = 0; argv[a][b] != 0; b++)
+			if (argv[i][j] != '\0'; j++)
 			{
-				if (argv[a][b] < 48 || argv[a][b] > 57)
-				{
-					puts("Error");
-					return (1);
-				}
+				printf("%s\n", "Error");
+				return (1);
 			}
 		}
-		for (y = 1; y < argc; y++)
-		{
-			r = atoi(*(argv + y));
-			s += r;
-		}
-		printf("%d\n", s);
 	}
-	else
-		printf("0\n");
+	for (k = 1; k < argc; k++)
+	{
+		num = atoi(argc[k]);
+		result += num
+	}
+	printf("%d\n", result);
 	return (0);
 }
