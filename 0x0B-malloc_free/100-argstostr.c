@@ -35,6 +35,10 @@ char *argstostr(int ac, char **av)
 		{
 			y[count] = av[m][n];
 			count++;
+	
 		}
-		return (y);
+		y[count] = 10;
+		count++;
 	}
+	return (y);
+}
