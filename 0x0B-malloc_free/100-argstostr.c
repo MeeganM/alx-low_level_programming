@@ -34,7 +34,7 @@ char *argstostr(int ac, char **av)
 		for (n = 0; av[m][n] != 0; n++)
 		{
 			y[count] = av[m][n];
-			count++
+			count++;
 		}
 		y[count] = 10;
 		count++;
