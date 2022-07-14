@@ -29,10 +29,10 @@ list_t *add_node(list_t **head, const char *str)
 }
 
 /**
- *  * len - Calculates the length of a string.
- *   * @str: Constant string
- *    * Return: The length of the string
- *     */
+ * len - Calculates the length of a string.
+ * @str: Constant string
+ * Return: The length of the string
+ */
 
 int len(const char *str)
 {
