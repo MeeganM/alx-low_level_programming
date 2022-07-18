@@ -16,7 +16,7 @@ typedef struct listint_s
 {
 	int n;
 	struct listint_s *next;
-} listadd_t;
+} listint_t;
 
 /**
  * struct listp_s - singly linked list
